@@ -36,7 +36,7 @@ const AddCounsellorsMainPage = () => {
     e.preventDefault();
     setLoading(true)
     try {
-        await fetch(`/api/counsellors/editCounsellor/${id}`, {
+        await fetch(`https://liv-backend-2.onrender.com/api/counsellors/editCounsellor/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'

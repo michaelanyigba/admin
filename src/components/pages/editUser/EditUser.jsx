@@ -22,7 +22,7 @@ const EditUser = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`/api/users/update/${id}`,{
+            const response = await fetch(`https://liv-backend-2.onrender.com/api/users/update/${id}`,{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const EditUser = () => {
             setLoading(true);
 
             try {
-                const res = await fetch("/api/users/find/"+id);
+                const res = await fetch("https://liv-backend-2.onrender.com/api/users/find/"+id);
                 const data = await res.json();
                 setFullName(data.fullName)
                 setUsername(data.username);
