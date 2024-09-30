@@ -50,7 +50,7 @@ const HomeMainPage = () => {
       const getCounsellors = async () =>{
 
           try {
-              const res = await fetch("/api/counsellors/all");
+              const res = await fetch("https://liv-backend-2.onrender.com/api/counsellors/all");
               const data = await res.json();
               setCounsellors(data)
               if(data.error){
@@ -72,7 +72,7 @@ const HomeMainPage = () => {
       const getArticles = async () =>{
 
           try {
-              const res = await fetch("/api/articles/all");
+              const res = await fetch("https://liv-backend-2.onrender.com/api/articles/all");
               const data = await res.json();
               setArticles(data)
               if(data.error){
@@ -92,7 +92,7 @@ const HomeMainPage = () => {
       const getPosts = async () =>{
 
           try {
-              const res = await fetch("/api/post/get-post");
+              const res = await fetch("https://liv-backend-2.onrender.com/api/post/get-post");
               const data = await res.json();
               setPosts(data.data)
               if(data.error){

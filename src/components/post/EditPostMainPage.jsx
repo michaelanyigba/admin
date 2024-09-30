@@ -39,7 +39,7 @@ const EditPostMainPage = () => {
 
 //   fetching post on the page
   useEffect(() => {
-    fetch(`/api/post/${id}`)
+    fetch(`https://liv-backend-2.onrender.com/api/post/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setTitle(data.title)

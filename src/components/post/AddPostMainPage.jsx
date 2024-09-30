@@ -38,7 +38,7 @@ const AddPostMainPage = () => {
   const handleClick = async (e) => {
     e.preventDefault()
    try {
-    fetch("/api/post/add", {
+    fetch("https://liv-backend-2.onrender.com/api/post/add", {
       method: "POST",
       crossDomain: true,
       headers: {

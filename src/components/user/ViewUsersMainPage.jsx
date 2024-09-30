@@ -18,7 +18,7 @@ const ViewUserMainPage = ({id}) => {
             setLoading(true);
 
             try {
-                const res = await fetch(`/api/users/all?search=${searchTerm}`);
+                const res = await fetch(`https://liv-backend-2.onrender.com/api/users/all?search=${searchTerm}`);
                 const data = await res.json();
                 setUsers(data)
                 if(data.error){

@@ -24,7 +24,7 @@ const AddCounsellorsMainPage = () => {
   };
 
   useEffect(()=> {
-    fetch(`/api/counsellors/${id}`)
+    fetch(`https://liv-backend-2.onrender.com/api/counsellors/${id}`)
     .then((response)=> response.json())
     .then((data)=> setInputs(data))
     .catch((error)=> console.error("Error fetching counsellors", error))

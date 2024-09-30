@@ -16,7 +16,7 @@ const ViewCounsellorsMainPage = () => {
             setLoading(true);
 
             try {
-                const res = await fetch(`/api/counsellors/all?search=${searchTerm}`);
+                const res = await fetch(`https://liv-backend-2.onrender.com/api/counsellors/all?search=${searchTerm}`);
                 const data = await res.json();
                 setCounsellors(data)
                 if(data.error){

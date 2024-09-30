@@ -12,7 +12,7 @@ const EditArticlesMainPage = () => {
   });
 
   useEffect(()=> {
-    fetch(`/api/articles/${id}`)
+    fetch(`https://liv-backend-2.onrender.com/api/articles/${id}`)
     .then((response)=> response.json())
     .then((data)=> setInputs(data))
     .catch((error)=> console.error("Error fetching articles", error))
@@ -26,7 +26,7 @@ const EditArticlesMainPage = () => {
     e.preventDefault();
     setLoading(true)
     try {
-        await fetch(`/api/articles/editArticle/${id}`, {
+        await fetch(`https://liv-backend-2.onrender.com/api/articles/editArticle/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
